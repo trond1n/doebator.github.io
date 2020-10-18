@@ -11,8 +11,10 @@
 <body>
     <div class="page">
         <form class="name__input-container">
-            <input type="text" placeholder="Введите имя виновного" class="name__input_field">
-            <button class="name__input_button button">Доебаться!</button>
+            <input type="text" placeholder="Введите имя виновного" class="name__input_field" minlength='2'
+                maxlength="30" pattern="^[а-яА-ЯёЁ0-9\s]+$" required>
+                <p class="error"></p>
+            <button class="name__input_button button" disabled="disabled">Доебаться!</button>
         </form>
 
         <div class="app hide">

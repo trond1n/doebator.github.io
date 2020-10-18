@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Courier New;
     margin: 0;
     background-color: bisque;
     display: flex;
@@ -16,6 +16,7 @@ body {
 
 
 .page {
+
     width: 100%;
 }
 
@@ -29,114 +30,55 @@ body {
 
 .app__header {
     margin: 0 auto;
-    font-family: 'Courier New', Courier, monospace;
+
     font-size: 50px;
 }
 
 .app__frase {
     margin: 0 auto;
 
-    font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
 }
 
-:root {
-    --backgroundColor: rgba(246, 241, 209);
-    --colorShadeA: rgb(106, 163, 137);
-    --colorShadeB: rgb(121, 186, 156);
-    --colorShadeC: rgb(150, 232, 195);
-    --colorShadeD: rgb(187, 232, 211);
-    --colorShadeE: rgb(205, 255, 232);
-}
+.button {
+    font-family: Courier New;
+    font-weight: bold;
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-
-* {
-    box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-
-button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+    margin: auto;
+    width: 40%;
+    margin-top: 20px;
+    height: 80px;
+    border: 5px solid rgb(51, 161, 110);
+    background: #81ebb9;
+    border-radius: 20px;
+    font-size: 30px;
+    transition: 1s;
     outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: var(--colorShadeA);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: inherit;
+
 }
 
-button.button {
-    padding: 1em 2em;
-    border: 2px solid var(--colorShadeA);
-    border-radius: 1em;
-    background: var(--colorShadeE);
-    transform-style: preserve-3d;
-    transition: all 175ms cubic-bezier(0, 0, 1, 1);
-}
-
-button.button::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--colorShadeC);
-    border-radius: inherit;
-    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
-    transform: translate3d(0, 0.75em, -1em);
-    transition: all 175ms cubic-bezier(0, 0, 1, 1);
-}
-
-
-button.button:hover {
-    background: var(--colorShadeD);
-    transform: translate(0, 0.375em);
-}
-
-button.button:hover::before {
-    transform: translate3d(0, 0.75em, -1em);
-}
-
-button.button:active {
-    transform: translate(0em, 0.75em);
-}
-
-button.button:active::before {
-    transform: translate3d(0, 0, -1em);
-
-    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
-
+.button:hover {
+    transform: scale(1.03);
+    cursor: pointer
 }
 
 .name__input-container {
+
     margin: auto;
     width: 50%;
     display: flex;
     flex-direction: column;
 }
 
-.name__input_button {
-    margin: auto;
-    width: 40%;
-    margin-top: 20px;
+.disabled {
+    border: 5px solid #32403a;
+    background: #879990;
+    color: #343635;
 }
 
 .name__input_field {
+    font-family: Courier New;
+    font-weight: bold;
     margin: auto;
     height: 80px;
     width: 80%;
@@ -150,9 +92,20 @@ button.button:active::before {
 }
 
 .name__input_field::placeholder {
+    font-family: Courier New;
+
     color: white
 }
+
 .name__input_field:focus::placeholder {
     opacity: 0.5;
     color: white
+}
+.error{
+    margin: auto;
+    margin-top: 10px;
+    font-family: Courier New;
+    font-weight: bold;
+    font-size: 25px;
+    
 }
