@@ -4,7 +4,7 @@ const fraseButton = document.querySelector(".frase__generator_button");
 const inputForm = document.querySelector(".name__input-container");
 const input = document.querySelector(".name__input_field");
 const nameButton = document.querySelector(".name__input_button");
-const app = document.querySelector(".app");
+const app = document.querySelector(".app__contaiter");
 
 let name = "";
 
@@ -15,12 +15,12 @@ const fraseGenerate = () => {
 
 const nameInput = (evt) => {
   evt.preventDefault();
-  
+
   name = input.value;
   console.log(name);
   changeName();
-  inputForm.classList.add("hide");
-  app.classList.remove("hide");
+  inputForm.classList.remove("input");
+  app.classList.add("app");
   question.classList.remove("hide");
   fraseGenerate();
 };
